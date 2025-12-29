@@ -1,0 +1,29 @@
+
+/* Force Dashboard Button Visible */
+#nav-dashboard { 
+    display: block !important; 
+}
+
+.dashboard-link { 
+    color: #3498db !important; 
+    font-weight: 600 !important;
+    background: rgba(52, 152, 219, 0.1) !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+.dashboard-link:hover {
+    background: #3498db !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Hide login button when admin */
+body.admin-mode #nav-login {
+    display: none !important;
+}
+
+body.admin-mode #nav-logout {
+    display: block !important;
+}

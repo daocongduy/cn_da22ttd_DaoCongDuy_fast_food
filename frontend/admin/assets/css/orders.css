@@ -1,0 +1,401 @@
+/* Modern Orders Page Styles */
+/* Bảng màu đồng bộ với frontend: cam chủ đạo (#ff6a00, #f97316), navy (#0f172a), xanh lá cho trạng thái tốt */
+
+/* Page Header */
+.orders-page-header {
+    background: linear-gradient(135deg, #ff6a00 0%, #f97316 50%, #ea580c 100%);
+    color: #fefce8;
+    padding: 32px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    animation: fadeInDown 0.6s ease;
+}
+
+.orders-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.orders-title {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.orders-title-icon {
+    font-size: 1.2em;
+    background: rgba(255,255,255,0.2);
+    padding: 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.orders-subtitle {
+    font-size: 1.2em;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.orders-header-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.orders-btn {
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+}
+
+.orders-btn-refresh {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+}
+
+.orders-btn-dashboard {
+    background: #0f172a;
+    color: #fef3c7;
+}
+
+.orders-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Stats Cards */
+.orders-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.orders-stat-card {
+    color: white;
+    padding: 24px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 0.6s ease;
+}
+
+.orders-stat-card:nth-child(1) { animation-delay: 0.1s; }
+.orders-stat-card:nth-child(2) { animation-delay: 0.2s; }
+.orders-stat-card:nth-child(3) { animation-delay: 0.3s; }
+.orders-stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+.orders-stat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.orders-stat-card-pending {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    box-shadow: 0 8px 32px rgba(249, 115, 22, 0.35);
+}
+
+.orders-stat-card-preparing {
+    background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+    box-shadow: 0 8px 32px rgba(234, 88, 12, 0.32);
+}
+
+.orders-stat-card-delivering {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.32);
+}
+
+.orders-stat-card-completed {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    box-shadow: 0 8px 32px rgba(14, 165, 233, 0.3);
+}
+
+.orders-stat-card:hover {
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+
+.orders-stat-icon {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 4em;
+    opacity: 0.1;
+}
+
+.orders-stat-content {
+    position: relative;
+    z-index: 1;
+}
+
+.orders-stat-value {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.orders-stat-label {
+    font-size: 1.1em;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.orders-stat-desc {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+/* Table Container */
+.orders-table-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+}
+
+.orders-table-header {
+    background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+    padding: 24px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.orders-table-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.orders-table-title-icon {
+    background: linear-gradient(135deg, #ff6a00, #f97316);
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+
+.orders-table-subtitle {
+    color: #6b7280;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.orders-search-input {
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 0.95em;
+    width: 300px;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.orders-search-input:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.16), 0 4px 16px rgba(249, 115, 22, 0.18);
+    transform: translateY(-1px);
+}
+
+/* Table */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.orders-table thead tr {
+    background: linear-gradient(135deg, #ff6a00 0%, #f97316 50%, #ea580c 100%);
+    color: #fefce8;
+}
+
+.orders-table th {
+    padding: 20px 16px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.orders-table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.orders-table tbody tr:hover {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.orders-table tbody tr:hover td:first-child {
+    border-left: 4px solid #f97316;
+}
+
+.orders-table td {
+    padding: 20px 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+/* Loading */
+.orders-loading {
+    padding: 40px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.orders-loading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.orders-loading-spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #f97316;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.orders-loading-text {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .orders-page-header {
+        padding: 24px;
+    }
+    
+    .orders-title {
+        font-size: 2em;
+    }
+    
+    .orders-search-input {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .orders-page-header {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .orders-title {
+        font-size: 1.8em;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .orders-subtitle {
+        font-size: 1em;
+    }
+    
+    .orders-stat-card {
+        padding: 16px;
+        text-align: center;
+    }
+    
+    .orders-stat-value {
+        font-size: 2em;
+    }
+    
+    .orders-search-input {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .orders-table {
+        font-size: 0.85em;
+    }
+    
+    .orders-table th,
+    .orders-table td {
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .orders-page-header {
+        padding: 16px;
+    }
+    
+    .orders-title {
+        font-size: 1.5em;
+    }
+    
+    .orders-stat-card {
+        padding: 12px;
+    }
+    
+    .orders-table th,
+    .orders-table td {
+        padding: 8px 4px;
+        font-size: 0.8em;
+    }
+}

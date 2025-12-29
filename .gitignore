@@ -1,0 +1,15 @@
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Uploads (keep folder structure)
+frontend/assets/uploads/*
+!frontend/assets/uploads/.gitkeep
